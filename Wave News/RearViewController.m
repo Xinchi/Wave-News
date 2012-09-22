@@ -296,7 +296,7 @@
         [picker setMessageBody:content isHTML:YES];
         
         //    [self.parentView presentModalViewController:picker animated:YES];
-        [self presentModalViewController:picker animated:YES];
+//        [self presentModalViewController:picker animated:YES];
         //    [picker release];
 
     }
@@ -309,41 +309,41 @@
 
 #pragma mark - email delegate
 // The mail compose view controller delegate method
-- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
-{
-    switch (result)
-    {
-        case MFMailComposeResultCancelled:
-            NSLog(@"Mail cancelled: you cancelled the operation and no email message was queued.");
-            break;
-        case MFMailComposeResultSaved:
-            NSLog(@"Mail saved: you saved the email message in the drafts folder.");
-            break;
-        case MFMailComposeResultSent:
-            NSLog(@"Mail send: the email message is queued in the outbox. It is ready to send.");
-            
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success"
-                                                            message:@"Thanks for your suggestions!"
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles: nil];
-            [alert show];
-            [alert release];
-            break;
-        case MFMailComposeResultFailed:
-        {
-            NSLog(@"Mail failed: the email message was not saved or queued, possibly due to an error.");
-            break;
-        }
-        default:
-            NSLog(@"Mail not sent.");
-            break;
-    }
-    
-    [picker dismissModalViewControllerAnimated:YES];
-    [picker release];
-    return;
-}
+//- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+//{
+//    switch (result)
+//    {
+//        case MFMailComposeResultCancelled:
+//            NSLog(@"Mail cancelled: you cancelled the operation and no email message was queued.");
+//            break;
+//        case MFMailComposeResultSaved:
+//            NSLog(@"Mail saved: you saved the email message in the drafts folder.");
+//            break;
+//        case MFMailComposeResultSent:
+//            NSLog(@"Mail send: the email message is queued in the outbox. It is ready to send.");
+//            
+//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success"
+//                                                            message:@"Thanks for your suggestions!"
+//                                                           delegate:nil
+//                                                  cancelButtonTitle:@"OK"
+//                                                  otherButtonTitles: nil];
+//            [alert show];
+//            [alert release];
+//            break;
+//        case MFMailComposeResultFailed:
+//        {
+//            NSLog(@"Mail failed: the email message was not saved or queued, possibly due to an error.");
+//            break;
+//        }
+//        default:
+//            NSLog(@"Mail not sent.");
+//            break;
+//    }
+//    
+//    [picker dismissModalViewControllerAnimated:YES];
+//    [picker release];
+//    return;
+//}
 
 
 

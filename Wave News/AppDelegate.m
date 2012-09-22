@@ -38,16 +38,16 @@
 }
 
 void uncaughtExceptionHandler(NSException *exception) {
-    [FlurryAnalytics logError:@"Uncaught" message:@"Crash!" exception:exception];
+//    [FlurryAnalytics logError:@"Uncaught" message:@"Crash!" exception:exception];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
-    [FlurryAnalytics startSession:@"RWHAZ7QW1AH672CFI64D"];
-    [FlurryAnalytics setUserID:@"USER_ID"];
-    [FlurryAnalytics setAge:21];
-    [FlurryAnalytics setGender:@"m"];
+//    [FlurryAnalytics startSession:@"RWHAZ7QW1AH672CFI64D"];
+//    [FlurryAnalytics setUserID:@"USER_ID"];
+//    [FlurryAnalytics setAge:21];
+//    [FlurryAnalytics setGender:@"m"];
 
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     //    UINavigationController *nav = [[UINavigationController alloc] init];

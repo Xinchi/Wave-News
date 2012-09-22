@@ -50,7 +50,6 @@
 		437FC6EB14BA05A60024CBD1 /* OpenFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 437FC6EA14BA05A60024CBD1 /* OpenFlowViewController.m */; };
 		437FC6ED14BA069D0024CBD1 /* OpenFlowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437FC6EC14BA069D0024CBD1 /* OpenFlowViewController.xib */; };
 		437FC6F714BB435D0024CBD1 /* try.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437FC6F614BB435D0024CBD1 /* try.jpg */; };
-		4395819A14D29A8200C2A0ED /* libFlurryAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4395819914D29A8100C2A0ED /* libFlurryAnalytics.a */; };
 		439581A314D2FE1500C2A0ED /* SaveAndShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 439581A114D2FE1500C2A0ED /* SaveAndShare.m */; };
 		439581A614D2FEDF00C2A0ED /* SaveAndShare.xib in Resources */ = {isa = PBXBuildFile; fileRef = 439581A514D2FEDF00C2A0ED /* SaveAndShare.xib */; };
 		439581AD14D304F000C2A0ED /* WebViewFullArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 439581AB14D304EF00C2A0ED /* WebViewFullArticle.m */; };
@@ -251,8 +250,6 @@
 		437FC6EA14BA05A60024CBD1 /* OpenFlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenFlowViewController.m; sourceTree = "<group>"; };
 		437FC6EC14BA069D0024CBD1 /* OpenFlowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenFlowViewController.xib; sourceTree = "<group>"; };
 		437FC6F614BB435D0024CBD1 /* try.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = try.jpg; sourceTree = "<group>"; };
-		4395819814D29A8100C2A0ED /* FlurryAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAnalytics.h; sourceTree = "<group>"; };
-		4395819914D29A8100C2A0ED /* libFlurryAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAnalytics.a; sourceTree = "<group>"; };
 		439581A014D2FE1500C2A0ED /* SaveAndShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveAndShare.h; sourceTree = "<group>"; };
 		439581A114D2FE1500C2A0ED /* SaveAndShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveAndShare.m; sourceTree = "<group>"; };
 		439581A514D2FEDF00C2A0ED /* SaveAndShare.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveAndShare.xib; sourceTree = "<group>"; };
@@ -450,7 +447,6 @@
 				43B1F94A14AEE45000486E79 /* CFNetwork.framework in Frameworks */,
 				4332266714AE0D6300F81088 /* UIKit.framework in Frameworks */,
 				4332266914AE0D6300F81088 /* Foundation.framework in Frameworks */,
-				4395819A14D29A8200C2A0ED /* libFlurryAnalytics.a in Frameworks */,
 				4354EFF614F5258000E8904F /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,7 +475,6 @@
 				4397DBF814CE7C9600F39E8E /* logo-2.png */,
 				4397DBF614CE7AC800F39E8E /* logo-1.png */,
 				4316DB7914E6B24C00A20BD7 /* accessory.png */,
-				4395819714D29A8100C2A0ED /* FlurryAnalytics */,
 				43A62F0814BD8B650083F504 /* JTRevealSidebarV2 */,
 				43A3213114BC8B1700F2FBE4 /* Other View */,
 				43A3210C14BC8A9700F2FBE4 /* Supporting Files */,
@@ -609,15 +604,6 @@
 				4354EFF514F5258000E8904F /* README.txt */,
 			);
 			path = "GoogleAdMobAdsSDKiOS-5-1.0.5";
-			sourceTree = "<group>";
-		};
-		4395819714D29A8100C2A0ED /* FlurryAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				4395819814D29A8100C2A0ED /* FlurryAnalytics.h */,
-				4395819914D29A8100C2A0ED /* libFlurryAnalytics.a */,
-			);
-			path = FlurryAnalytics;
 			sourceTree = "<group>";
 		};
 		4397DBFC14CE9BC800F39E8E /* New SavedAndShare Pics */ = {
@@ -1224,8 +1210,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1251,8 +1237,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1357,8 +1343,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
